@@ -7,6 +7,7 @@ import 'package:pragmatest/core/shared/utils/colors_repository.dart';
 import 'package:pragmatest/core/shared/utils/style_repository.dart';
 import 'package:pragmatest/features/landing/data/repositories/implementation/cat_repository.dart';
 import 'package:pragmatest/features/landing/data/services/implementation/cat_service.dart';
+import 'package:pragmatest/features/landing/domain/blocs/cat_bloc/cat_bloc.dart';
 
 import '/generated/l10n.dart';
 import '/core/shared/auto_route/router.dart';
@@ -74,52 +75,61 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             ),
           ),
         ],
-        child: MaterialApp.router(
-          theme: ThemeData(
-            progressIndicatorTheme: const ProgressIndicatorThemeData(
-              color: Colors.white,
-            ),
-            elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: ColorsRepository.teal,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => CatBloc(
+                catRepository: context.read<CatRepository>(),
               ),
             ),
-            appBarTheme: AppBarTheme(
-              elevation: 0,
-              actionsIconTheme: const IconThemeData(color: Colors.white),
-              iconTheme: const IconThemeData(color: Colors.white),
-              titleTextStyle: extraLarge,
-              color: ColorsRepository.teal,
-            ),
-          ),
-          debugShowCheckedModeBanner: false,
-          routeInformationParser:
-              widget.getIt<AppRouter>().defaultRouteParser(),
-          routerDelegate: widget.getIt<AppRouter>().delegate(),
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
           ],
-          supportedLocales: S.delegate.supportedLocales,
-          builder: (context, child) {
-            return Builder(
-              builder: (context) {
-                final mediaQuery = MediaQuery.of(context);
-                return MediaQuery(
-                  data: mediaQuery.copyWith(
-                    accessibleNavigation: false,
+          child: MaterialApp.router(
+            theme: ThemeData(
+              progressIndicatorTheme: const ProgressIndicatorThemeData(
+                color: Colors.white,
+              ),
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: ColorsRepository.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: child!,
-                );
-              },
-            );
-          },
+                ),
+              ),
+              appBarTheme: AppBarTheme(
+                elevation: 0,
+                actionsIconTheme: const IconThemeData(color: Colors.white),
+                iconTheme: const IconThemeData(color: Colors.white),
+                titleTextStyle: extraLarge,
+                color: ColorsRepository.teal,
+              ),
+            ),
+            debugShowCheckedModeBanner: false,
+            routeInformationParser:
+                widget.getIt<AppRouter>().defaultRouteParser(),
+            routerDelegate: widget.getIt<AppRouter>().delegate(),
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            builder: (context, child) {
+              return Builder(
+                builder: (context) {
+                  final mediaQuery = MediaQuery.of(context);
+                  return MediaQuery(
+                    data: mediaQuery.copyWith(
+                      accessibleNavigation: false,
+                    ),
+                    child: child!,
+                  );
+                },
+              );
+            },
+          ),
         ),
       ),
     );
