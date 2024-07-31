@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pragmatest/core/shared/utils/colors_repository.dart';
 import 'package:pragmatest/core/shared/utils/style_repository.dart';
+import 'package:pragmatest/features/landing/data/repositories/implementation/cat_repository.dart';
+import 'package:pragmatest/features/landing/data/services/implementation/cat_service.dart';
 
 import '/generated/l10n.dart';
 import '/core/shared/auto_route/router.dart';
@@ -60,6 +62,17 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           RepositoryProvider<EnvironmentConfig>(
             create: (context) => widget.environmentConfig,
           ),
+          RepositoryProvider<CatService>(
+            create: (context) => CatService(
+              context.read<ApiConfig>(),
+              context.read<EnvironmentConfig>(),
+            ),
+          ),
+          RepositoryProvider<CatRepository>(
+            create: (context) => CatRepository(
+              catService: context.read<CatService>(),
+            ),
+          ),
         ],
         child: MaterialApp.router(
           theme: ThemeData(
@@ -85,7 +98,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           ),
           debugShowCheckedModeBanner: false,
           routeInformationParser:
-          widget.getIt<AppRouter>().defaultRouteParser(),
+              widget.getIt<AppRouter>().defaultRouteParser(),
           routerDelegate: widget.getIt<AppRouter>().delegate(),
           localizationsDelegates: const [
             S.delegate,
