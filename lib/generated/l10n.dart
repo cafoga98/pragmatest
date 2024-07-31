@@ -80,11 +80,51 @@ class S {
     );
   }
 
-  /// `There are no kittens to show`
+  /// `No kittens found! The cat basket is empty.`
   String get noKittens {
     return Intl.message(
-      'There are no kittens to show',
+      'No kittens found! The cat basket is empty.',
       name: 'noKittens',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unauthorized! The kittens are hiding from you.`
+  String get unauthorised {
+    return Intl.message(
+      'Unauthorized! The kittens are hiding from you.',
+      name: 'unauthorised',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bad request! The kittens didn't understand your request.`
+  String get badRequest {
+    return Intl.message(
+      'Bad request! The kittens didn\'t understand your request.',
+      name: 'badRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Server error! The kittens are causing some trouble on the server.`
+  String get serverError {
+    return Intl.message(
+      'Server error! The kittens are causing some trouble on the server.',
+      name: 'serverError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unexpected error! The kittens ran away and we couldn't find them.`
+  String get unexpectedError {
+    return Intl.message(
+      'Unexpected error! The kittens ran away and we couldn\'t find them.',
+      name: 'unexpectedError',
       desc: '',
       args: [],
     );

@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "badRequest": MessageLookupByLibrary.simpleMessage(
+            "Bad request! The kittens didn\'t understand your request."),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "loadingInformation":
@@ -32,12 +34,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "noConnection":
             MessageLookupByLibrary.simpleMessage("No Internet conection"),
         "noKittens": MessageLookupByLibrary.simpleMessage(
-            "There are no kittens to show"),
+            "No kittens found! The cat basket is empty."),
         "noLaunch": MessageLookupByLibrary.simpleMessage("Could not launch"),
         "searchByName":
             MessageLookupByLibrary.simpleMessage("Search your cat breed"),
+        "serverError": MessageLookupByLibrary.simpleMessage(
+            "Server error! The kittens are causing some trouble on the server."),
         "timeOut": MessageLookupByLibrary.simpleMessage(
             "Problems connecting to the server"),
-        "type": MessageLookupByLibrary.simpleMessage("Type")
+        "type": MessageLookupByLibrary.simpleMessage("Type"),
+        "unauthorised": MessageLookupByLibrary.simpleMessage(
+            "Unauthorized! The kittens are hiding from you."),
+        "unexpectedError": MessageLookupByLibrary.simpleMessage(
+            "Unexpected error! The kittens ran away and we couldn\'t find them.")
       };
 }
