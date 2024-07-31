@@ -30,6 +30,14 @@ class CardCat extends StatelessWidget {
                 image: NetworkImage(
                   catBreed.urlImage ?? '',
                 ),
+                imageErrorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                  return Image.asset(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    ImageRepository.catLogo,
+                    fit: BoxFit.cover,
+                  );
+                },
                 placeholder: const AssetImage(
                   ImageRepository.loadingNoBackground,
                 ),
@@ -42,43 +50,40 @@ class CardCat extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(color: Colors.white54),
                   padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Expanded(
-                    flex: 1,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
-                          child: Text(
-                            catBreed.name ?? 'No name',
-                            style: medium.copyWith(
-                              color: ColorsRepository.teal,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Text(
+                          catBreed.name ?? 'No name',
+                          style: medium.copyWith(
+                            color: ColorsRepository.teal,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Row(
-                          children: [
-                            Expanded(
-                              flex: 1,
-                              child: customListTile(
-                                title: 'Country',
-                                subtitle: catBreed.countryCodes ?? '',
-                              ),
+                      ),
+                      Row(
+                        children: [
+                          Flexible(
+                            flex: 1,
+                            child: customListTile(
+                              title: 'Country',
+                              subtitle: catBreed.countryCodes ?? '',
                             ),
-                            Expanded(
-                              flex: 1,
-                              child: customListTile(
-                                title: 'Intelligence',
-                                subtitle:
-                                    '${catBreed.intelligence.toString() ?? ''}/5',
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                          Flexible(
+                            flex: 1,
+                            child: customListTile(
+                              title: 'Intelligence',
+                              subtitle:
+                              '${catBreed.intelligence.toString() ?? ''}/5',
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
