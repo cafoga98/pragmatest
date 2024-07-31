@@ -22,9 +22,9 @@ class CatBloc extends Bloc<CatEvent, CatState> {
   void _fetchCats(FetchCats event, Emitter<CatState> emit) async {
     emit(const CatState.catLoading());
     if (event.handlePage == HandlePage.next) {
-      _page = _page + 10;
+      _page = _page + 1;
     } else if (event.handlePage == HandlePage.back && _page != 0) {
-      _page = _page - 10;
+      _page = _page - 1;
     }
     final response = await catRepository.fetchCats(page: _page);
     emit(
