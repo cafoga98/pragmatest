@@ -27,7 +27,7 @@ class CatService extends CatServiceInterface {
   Future<List<CatBreed>> fetchCats({required int page}) async {
     try {
       var response = await apiConfig.apiGet(
-          '${environmentConfig.apiBase}/breeds?limit=10&offset=${page * 10}');
+          '${environmentConfig.apiBase}/breeds?limit=10&page=$page');
       return List.from(
         (response as List).map(
           (e) => CatBreed.fromJson(e),
