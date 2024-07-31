@@ -15,13 +15,12 @@ final large = TextStyle(
 );
 
 final medium = TextStyle(
-  fontFamily: 'ChakraPetch',
+  fontFamily: 'SignikaNegative',
   fontSize: 19.sp,
-  fontWeight: FontWeight.bold,
 );
 
 final small = TextStyle(
-  fontFamily: 'ChakraPetch',
+  fontFamily: 'SignikaNegative',
   fontSize: 17.sp,
 );
 
