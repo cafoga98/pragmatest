@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mandatoryField":
             MessageLookupByLibrary.simpleMessage("Mandatory field"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "nameApp": MessageLookupByLibrary.simpleMessage("Oh my cat!"),
         "noConnection":
             MessageLookupByLibrary.simpleMessage("No Internet conection"),
         "noKittens": MessageLookupByLibrary.simpleMessage(

@@ -13,5 +13,6 @@
   "name": "Name",
   "type": "Type",
   "details": "Details",
-  "searchByName": "Search your cat breed"
+  "searchByName": "Search your cat breed",
+  "nameApp": "Oh my cat!"
 }
