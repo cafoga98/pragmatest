@@ -10,23 +10,35 @@ class CatBreed {
   final String? description;
   final String? temperament;
   final String? origin;
+  @JsonKey(name: 'country_codes')
   final String? countryCodes;
+  @JsonKey(name: 'life_span')
   final String? lifeSpan;
   final int? indoor;
   final int? lap;
   final int? adaptability;
+  @JsonKey(name: 'affection_level')
   final int? affectionLevel;
+  @JsonKey(name: 'child_friendly')
   final int? childFriendly;
+  @JsonKey(name: 'dog_friendly')
   final int? dogFriendly;
+  @JsonKey(name: 'energy_level')
   final int? energyLevel;
   final int? grooming;
+  @JsonKey(name: 'health_issues')
   final int? healthIssues;
   final int? intelligence;
+  @JsonKey(name: 'shedding_level')
   final int? sheddingLevel;
+  @JsonKey(name: 'social_needs')
   final int? socialNeeds;
+  @JsonKey(name: 'stranger_friendly')
   final int? strangerFriendly;
   final int? vocalisation;
+  @JsonKey(name: 'wikipedia_url')
   final String? wikipediaUrl;
+  @JsonKey(name: 'reference_image_id')
   final String? referenceImageId;
   final CatWeight? weight;
   String? urlImage;
@@ -59,7 +71,7 @@ class CatBreed {
     required this.urlImage,
   }) {
     urlImage =
-        'https://api.thecatapi.com/v1/images/search?breed_ids=$id';
+        'https://cdn2.thecatapi.com/images/$referenceImageId.jpg';
   }
 
   factory CatBreed.fromJson(Map<String, dynamic> json) =>
