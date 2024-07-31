@@ -26,5 +26,11 @@ class Failure with _$Failure {
   const factory Failure.noConnection({@Default(null) final String? message}) = NoConnection;
 
   /// Represents a failure indicating that an action could not be completed with an optional error [message].
-  const factory Failure.noActionComplete({@Default(null) final String? message}) = NoActionComplete;
+  const factory Failure.badRequest({@Default(null) final String? message}) = BadRequest;
+
+  /// Represents a failure indicating that an no authorization on a request [message].
+  const factory Failure.unauthorised({@Default(null) final String? message}) = Unauthorised;
+
+  /// Represents a failure indicating time out [message].
+  const factory Failure.timeOut({@Default(null) final String? message}) = TimeOut;
 }
