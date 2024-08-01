@@ -15,6 +15,7 @@ class CatBloc extends Bloc<CatEvent, CatState> {
   CatBloc({required this.catRepository}) : super(const CatState.catInitial()) {
     on<FetchCats>(_fetchCats);
     on<SearchCats>(_searchCats);
+    on<FetchCatDetail>(_fetchDetailCats);
   }
 
   int _page = 0;
@@ -51,6 +52,21 @@ class CatBloc extends Bloc<CatEvent, CatState> {
         ),
         (cat) => CatState.catLoaded(
           cats: [cat],
+        ),
+      ),
+    );
+  }
+
+  void _fetchDetailCats(FetchCatDetail event, Emitter<CatState> emit) async {
+    emit(const CatState.catDetailLoading());
+    final response = await catRepository.searchCats(name: event.name);
+    emit(
+      response.fold(
+        (l) => CatState.catDetailError(
+          message: l.message!,
+        ),
+        (cat) => CatState.catDetailLoaded(
+          cat: cat,
         ),
       ),
     );
