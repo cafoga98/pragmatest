@@ -31,8 +31,17 @@ Join the Oh my cat! community today and immerse yourself in the fascinating worl
 ### Features
 
 - **Splash Screen**: Enjoy a captivating welcome video with a brief 4-second delay to start your experience.
+
 - **Kitten List Page**: Browse through a comprehensive list of adorable kittens, each waiting to be explored.
+<p float="left">
+  <img src="https://github.com/cafoga98/pragmatest/blob/main/assets/img/landing.jpg" width="200" />
+  <img src="https://github.com/cafoga98/pragmatest/blob/main/assets/img/landing_search.jpg" width="200" /> 
+</p>
+
 - **Kitten Detail Page**: Dive into detailed information about your selected kitten, including all its unique characteristics and traits.
+<p float="left">
+  <img src="https://github.com/cafoga98/pragmatest/blob/main/assets/img/details.jpg" width="200" />
+</p>
 
 ### Version info
 
