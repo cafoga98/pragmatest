@@ -12,6 +12,8 @@ class CatBreed {
   final String? origin;
   @JsonKey(name: 'country_codes')
   final String? countryCodes;
+  @JsonKey(name: 'country_code')
+  final String? countryCode;
   @JsonKey(name: 'life_span')
   final String? lifeSpan;
   final int? indoor;
@@ -42,6 +44,23 @@ class CatBreed {
   final String? referenceImageId;
   final CatWeight? weight;
   String? urlImage;
+  @JsonKey(name: 'cfa_url')
+  final String? cfaUrl;
+  @JsonKey(name: 'vetstreet_url')
+  final String? vetstreetUrl;
+  @JsonKey(name: 'vcahospitals_url')
+  final String? vcahospitalsUrl;
+  final int? bidability;
+  final int? experimental;
+  final int? hairless;
+  final int? natural;
+  final int? rare;
+  final int? rex;
+  @JsonKey(name: 'suppressed_tail')
+  final int? suppressedTail;
+  @JsonKey(name: 'short_legs')
+  final int? shortLegs;
+  final int? hypoallergenic;
 
   CatBreed({
     required this.id,
@@ -50,6 +69,7 @@ class CatBreed {
     required this.temperament,
     required this.origin,
     required this.countryCodes,
+    required this.countryCode,
     required this.lifeSpan,
     required this.indoor,
     required this.lap,
@@ -69,14 +89,25 @@ class CatBreed {
     required this.referenceImageId,
     required this.weight,
     required this.urlImage,
+    required this.cfaUrl,
+    required this.vetstreetUrl,
+    required this.vcahospitalsUrl,
+    required this.bidability,
+    required this.experimental,
+    required this.hairless,
+    required this.natural,
+    required this.rare,
+    required this.rex,
+    required this.suppressedTail,
+    required this.shortLegs,
+    required this.hypoallergenic,
   }) {
     urlImage =
-        'https://cdn2.thecatapi.com/images/$referenceImageId.jpg';
+    'https://cdn2.thecatapi.com/images/$referenceImageId.jpg';
   }
 
   factory CatBreed.fromJson(Map<String, dynamic> json) =>
       _$CatBreedFromJson(json);
 
   Map<String, dynamic> toJson() => _$CatBreedToJson(this);
-
 }

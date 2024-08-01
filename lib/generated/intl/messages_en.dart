@@ -22,14 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "adaptability": MessageLookupByLibrary.simpleMessage("Adaptability"),
+        "affectionLevel":
+            MessageLookupByLibrary.simpleMessage("Affection Level"),
         "badRequest": MessageLookupByLibrary.simpleMessage(
             "Bad request! The kittens didn\'t understand your request."),
+        "country": MessageLookupByLibrary.simpleMessage("Country"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
+        "intelligence": MessageLookupByLibrary.simpleMessage("Intelligence"),
+        "lifeSpan": MessageLookupByLibrary.simpleMessage("Life span in years"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "loadingInformation":
             MessageLookupByLibrary.simpleMessage("Loading information"),
         "mandatoryField":
             MessageLookupByLibrary.simpleMessage("Mandatory field"),
+        "moreInfo": MessageLookupByLibrary.simpleMessage("More information"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameApp": MessageLookupByLibrary.simpleMessage("Oh my cat!"),
         "noConnection":
@@ -37,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noKittens": MessageLookupByLibrary.simpleMessage(
             "No kittens found! The cat basket is empty."),
         "noLaunch": MessageLookupByLibrary.simpleMessage("Could not launch"),
+        "noName": MessageLookupByLibrary.simpleMessage("No name"),
         "searchByName":
             MessageLookupByLibrary.simpleMessage("Search your cat breed"),
         "serverError": MessageLookupByLibrary.simpleMessage(

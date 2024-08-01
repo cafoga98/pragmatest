@@ -209,6 +209,86 @@ class S {
       args: [],
     );
   }
+
+  /// `No name`
+  String get noName {
+    return Intl.message(
+      'No name',
+      name: 'noName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More information`
+  String get moreInfo {
+    return Intl.message(
+      'More information',
+      name: 'moreInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message(
+      'Country',
+      name: 'country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Intelligence`
+  String get intelligence {
+    return Intl.message(
+      'Intelligence',
+      name: 'intelligence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adaptability`
+  String get adaptability {
+    return Intl.message(
+      'Adaptability',
+      name: 'adaptability',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Affection Level`
+  String get affectionLevel {
+    return Intl.message(
+      'Affection Level',
+      name: 'affectionLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Life span in years`
+  String get lifeSpan {
+    return Intl.message(
+      'Life span in years',
+      name: 'lifeSpan',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

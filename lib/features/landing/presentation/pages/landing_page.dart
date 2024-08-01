@@ -72,6 +72,12 @@ class LandingPage extends StatelessWidget {
             child: SearchWidget(),
           ),
           BlocBuilder<CatBloc, CatState>(
+            buildWhen: (context, state) => state.maybeWhen(
+              orElse: () => true,
+              catDetailLoaded: (d) => false,
+              catDetailLoading: () => false,
+              catDetailError: (e) => false,
+            ),
             builder: (context, state) => Expanded(
               flex: 8,
               child: state.maybeWhen(

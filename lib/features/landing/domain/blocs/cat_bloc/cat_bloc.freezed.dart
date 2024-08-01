@@ -21,6 +21,7 @@ mixin _$CatEvent {
     required TResult Function() started,
     required TResult Function(HandlePage handlePage) fetchCats,
     required TResult Function(String name) searchCats,
+    required TResult Function(String name) fetchCatDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$CatEvent {
     TResult? Function()? started,
     TResult? Function(HandlePage handlePage)? fetchCats,
     TResult? Function(String name)? searchCats,
+    TResult? Function(String name)? fetchCatDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$CatEvent {
     TResult Function()? started,
     TResult Function(HandlePage handlePage)? fetchCats,
     TResult Function(String name)? searchCats,
+    TResult Function(String name)? fetchCatDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$CatEvent {
     required TResult Function(Started value) started,
     required TResult Function(FetchCats value) fetchCats,
     required TResult Function(SearchCats value) searchCats,
+    required TResult Function(FetchCatDetail value) fetchCatDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$CatEvent {
     TResult? Function(Started value)? started,
     TResult? Function(FetchCats value)? fetchCats,
     TResult? Function(SearchCats value)? searchCats,
+    TResult? Function(FetchCatDetail value)? fetchCatDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$CatEvent {
     TResult Function(Started value)? started,
     TResult Function(FetchCats value)? fetchCats,
     TResult Function(SearchCats value)? searchCats,
+    TResult Function(FetchCatDetail value)? fetchCatDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -118,6 +124,7 @@ class _$Started implements Started {
     required TResult Function() started,
     required TResult Function(HandlePage handlePage) fetchCats,
     required TResult Function(String name) searchCats,
+    required TResult Function(String name) fetchCatDetail,
   }) {
     return started();
   }
@@ -128,6 +135,7 @@ class _$Started implements Started {
     TResult? Function()? started,
     TResult? Function(HandlePage handlePage)? fetchCats,
     TResult? Function(String name)? searchCats,
+    TResult? Function(String name)? fetchCatDetail,
   }) {
     return started?.call();
   }
@@ -138,6 +146,7 @@ class _$Started implements Started {
     TResult Function()? started,
     TResult Function(HandlePage handlePage)? fetchCats,
     TResult Function(String name)? searchCats,
+    TResult Function(String name)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -152,6 +161,7 @@ class _$Started implements Started {
     required TResult Function(Started value) started,
     required TResult Function(FetchCats value) fetchCats,
     required TResult Function(SearchCats value) searchCats,
+    required TResult Function(FetchCatDetail value) fetchCatDetail,
   }) {
     return started(this);
   }
@@ -162,6 +172,7 @@ class _$Started implements Started {
     TResult? Function(Started value)? started,
     TResult? Function(FetchCats value)? fetchCats,
     TResult? Function(SearchCats value)? searchCats,
+    TResult? Function(FetchCatDetail value)? fetchCatDetail,
   }) {
     return started?.call(this);
   }
@@ -172,6 +183,7 @@ class _$Started implements Started {
     TResult Function(Started value)? started,
     TResult Function(FetchCats value)? fetchCats,
     TResult Function(SearchCats value)? searchCats,
+    TResult Function(FetchCatDetail value)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -253,6 +265,7 @@ class _$FetchCats implements FetchCats {
     required TResult Function() started,
     required TResult Function(HandlePage handlePage) fetchCats,
     required TResult Function(String name) searchCats,
+    required TResult Function(String name) fetchCatDetail,
   }) {
     return fetchCats(handlePage);
   }
@@ -263,6 +276,7 @@ class _$FetchCats implements FetchCats {
     TResult? Function()? started,
     TResult? Function(HandlePage handlePage)? fetchCats,
     TResult? Function(String name)? searchCats,
+    TResult? Function(String name)? fetchCatDetail,
   }) {
     return fetchCats?.call(handlePage);
   }
@@ -273,6 +287,7 @@ class _$FetchCats implements FetchCats {
     TResult Function()? started,
     TResult Function(HandlePage handlePage)? fetchCats,
     TResult Function(String name)? searchCats,
+    TResult Function(String name)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (fetchCats != null) {
@@ -287,6 +302,7 @@ class _$FetchCats implements FetchCats {
     required TResult Function(Started value) started,
     required TResult Function(FetchCats value) fetchCats,
     required TResult Function(SearchCats value) searchCats,
+    required TResult Function(FetchCatDetail value) fetchCatDetail,
   }) {
     return fetchCats(this);
   }
@@ -297,6 +313,7 @@ class _$FetchCats implements FetchCats {
     TResult? Function(Started value)? started,
     TResult? Function(FetchCats value)? fetchCats,
     TResult? Function(SearchCats value)? searchCats,
+    TResult? Function(FetchCatDetail value)? fetchCatDetail,
   }) {
     return fetchCats?.call(this);
   }
@@ -307,6 +324,7 @@ class _$FetchCats implements FetchCats {
     TResult Function(Started value)? started,
     TResult Function(FetchCats value)? fetchCats,
     TResult Function(SearchCats value)? searchCats,
+    TResult Function(FetchCatDetail value)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (fetchCats != null) {
@@ -392,6 +410,7 @@ class _$SearchCats implements SearchCats {
     required TResult Function() started,
     required TResult Function(HandlePage handlePage) fetchCats,
     required TResult Function(String name) searchCats,
+    required TResult Function(String name) fetchCatDetail,
   }) {
     return searchCats(name);
   }
@@ -402,6 +421,7 @@ class _$SearchCats implements SearchCats {
     TResult? Function()? started,
     TResult? Function(HandlePage handlePage)? fetchCats,
     TResult? Function(String name)? searchCats,
+    TResult? Function(String name)? fetchCatDetail,
   }) {
     return searchCats?.call(name);
   }
@@ -412,6 +432,7 @@ class _$SearchCats implements SearchCats {
     TResult Function()? started,
     TResult Function(HandlePage handlePage)? fetchCats,
     TResult Function(String name)? searchCats,
+    TResult Function(String name)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (searchCats != null) {
@@ -426,6 +447,7 @@ class _$SearchCats implements SearchCats {
     required TResult Function(Started value) started,
     required TResult Function(FetchCats value) fetchCats,
     required TResult Function(SearchCats value) searchCats,
+    required TResult Function(FetchCatDetail value) fetchCatDetail,
   }) {
     return searchCats(this);
   }
@@ -436,6 +458,7 @@ class _$SearchCats implements SearchCats {
     TResult? Function(Started value)? started,
     TResult? Function(FetchCats value)? fetchCats,
     TResult? Function(SearchCats value)? searchCats,
+    TResult? Function(FetchCatDetail value)? fetchCatDetail,
   }) {
     return searchCats?.call(this);
   }
@@ -446,6 +469,7 @@ class _$SearchCats implements SearchCats {
     TResult Function(Started value)? started,
     TResult Function(FetchCats value)? fetchCats,
     TResult Function(SearchCats value)? searchCats,
+    TResult Function(FetchCatDetail value)? fetchCatDetail,
     required TResult orElse(),
   }) {
     if (searchCats != null) {
@@ -465,6 +489,151 @@ abstract class SearchCats implements CatEvent {
 }
 
 /// @nodoc
+abstract class _$$FetchCatDetailCopyWith<$Res> {
+  factory _$$FetchCatDetailCopyWith(
+          _$FetchCatDetail value, $Res Function(_$FetchCatDetail) then) =
+      __$$FetchCatDetailCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String name});
+}
+
+/// @nodoc
+class __$$FetchCatDetailCopyWithImpl<$Res>
+    extends _$CatEventCopyWithImpl<$Res, _$FetchCatDetail>
+    implements _$$FetchCatDetailCopyWith<$Res> {
+  __$$FetchCatDetailCopyWithImpl(
+      _$FetchCatDetail _value, $Res Function(_$FetchCatDetail) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+  }) {
+    return _then(_$FetchCatDetail(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchCatDetail implements FetchCatDetail {
+  const _$FetchCatDetail({required this.name});
+
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'CatEvent.fetchCatDetail(name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchCatDetail &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchCatDetailCopyWith<_$FetchCatDetail> get copyWith =>
+      __$$FetchCatDetailCopyWithImpl<_$FetchCatDetail>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(HandlePage handlePage) fetchCats,
+    required TResult Function(String name) searchCats,
+    required TResult Function(String name) fetchCatDetail,
+  }) {
+    return fetchCatDetail(name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(HandlePage handlePage)? fetchCats,
+    TResult? Function(String name)? searchCats,
+    TResult? Function(String name)? fetchCatDetail,
+  }) {
+    return fetchCatDetail?.call(name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(HandlePage handlePage)? fetchCats,
+    TResult Function(String name)? searchCats,
+    TResult Function(String name)? fetchCatDetail,
+    required TResult orElse(),
+  }) {
+    if (fetchCatDetail != null) {
+      return fetchCatDetail(name);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(FetchCats value) fetchCats,
+    required TResult Function(SearchCats value) searchCats,
+    required TResult Function(FetchCatDetail value) fetchCatDetail,
+  }) {
+    return fetchCatDetail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(FetchCats value)? fetchCats,
+    TResult? Function(SearchCats value)? searchCats,
+    TResult? Function(FetchCatDetail value)? fetchCatDetail,
+  }) {
+    return fetchCatDetail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(FetchCats value)? fetchCats,
+    TResult Function(SearchCats value)? searchCats,
+    TResult Function(FetchCatDetail value)? fetchCatDetail,
+    required TResult orElse(),
+  }) {
+    if (fetchCatDetail != null) {
+      return fetchCatDetail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchCatDetail implements CatEvent {
+  const factory FetchCatDetail({required final String name}) = _$FetchCatDetail;
+
+  String get name;
+  @JsonKey(ignore: true)
+  _$$FetchCatDetailCopyWith<_$FetchCatDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CatState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -472,6 +641,9 @@ mixin _$CatState {
     required TResult Function() catLoading,
     required TResult Function(List<CatBreed> cats) catLoaded,
     required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -480,6 +652,9 @@ mixin _$CatState {
     TResult? Function()? catLoading,
     TResult? Function(List<CatBreed> cats)? catLoaded,
     TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -488,6 +663,9 @@ mixin _$CatState {
     TResult Function()? catLoading,
     TResult Function(List<CatBreed> cats)? catLoaded,
     TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -497,6 +675,9 @@ mixin _$CatState {
     required TResult Function(_CatLoading value) catLoading,
     required TResult Function(_CatLoaded value) catLoaded,
     required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -505,6 +686,9 @@ mixin _$CatState {
     TResult? Function(_CatLoading value)? catLoading,
     TResult? Function(_CatLoaded value)? catLoaded,
     TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -513,6 +697,9 @@ mixin _$CatState {
     TResult Function(_CatLoading value)? catLoading,
     TResult Function(_CatLoaded value)? catLoaded,
     TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -577,6 +764,9 @@ class _$_CatInitial implements _CatInitial {
     required TResult Function() catLoading,
     required TResult Function(List<CatBreed> cats) catLoaded,
     required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
   }) {
     return catInitial();
   }
@@ -588,6 +778,9 @@ class _$_CatInitial implements _CatInitial {
     TResult? Function()? catLoading,
     TResult? Function(List<CatBreed> cats)? catLoaded,
     TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
   }) {
     return catInitial?.call();
   }
@@ -599,6 +792,9 @@ class _$_CatInitial implements _CatInitial {
     TResult Function()? catLoading,
     TResult Function(List<CatBreed> cats)? catLoaded,
     TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
     required TResult orElse(),
   }) {
     if (catInitial != null) {
@@ -614,6 +810,9 @@ class _$_CatInitial implements _CatInitial {
     required TResult Function(_CatLoading value) catLoading,
     required TResult Function(_CatLoaded value) catLoaded,
     required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
   }) {
     return catInitial(this);
   }
@@ -625,6 +824,9 @@ class _$_CatInitial implements _CatInitial {
     TResult? Function(_CatLoading value)? catLoading,
     TResult? Function(_CatLoaded value)? catLoaded,
     TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
   }) {
     return catInitial?.call(this);
   }
@@ -636,6 +838,9 @@ class _$_CatInitial implements _CatInitial {
     TResult Function(_CatLoading value)? catLoading,
     TResult Function(_CatLoaded value)? catLoaded,
     TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
     required TResult orElse(),
   }) {
     if (catInitial != null) {
@@ -691,6 +896,9 @@ class _$_CatLoading implements _CatLoading {
     required TResult Function() catLoading,
     required TResult Function(List<CatBreed> cats) catLoaded,
     required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
   }) {
     return catLoading();
   }
@@ -702,6 +910,9 @@ class _$_CatLoading implements _CatLoading {
     TResult? Function()? catLoading,
     TResult? Function(List<CatBreed> cats)? catLoaded,
     TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
   }) {
     return catLoading?.call();
   }
@@ -713,6 +924,9 @@ class _$_CatLoading implements _CatLoading {
     TResult Function()? catLoading,
     TResult Function(List<CatBreed> cats)? catLoaded,
     TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
     required TResult orElse(),
   }) {
     if (catLoading != null) {
@@ -728,6 +942,9 @@ class _$_CatLoading implements _CatLoading {
     required TResult Function(_CatLoading value) catLoading,
     required TResult Function(_CatLoaded value) catLoaded,
     required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
   }) {
     return catLoading(this);
   }
@@ -739,6 +956,9 @@ class _$_CatLoading implements _CatLoading {
     TResult? Function(_CatLoading value)? catLoading,
     TResult? Function(_CatLoaded value)? catLoaded,
     TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
   }) {
     return catLoading?.call(this);
   }
@@ -750,6 +970,9 @@ class _$_CatLoading implements _CatLoading {
     TResult Function(_CatLoading value)? catLoading,
     TResult Function(_CatLoaded value)? catLoaded,
     TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
     required TResult orElse(),
   }) {
     if (catLoading != null) {
@@ -837,6 +1060,9 @@ class _$_CatLoaded implements _CatLoaded {
     required TResult Function() catLoading,
     required TResult Function(List<CatBreed> cats) catLoaded,
     required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
   }) {
     return catLoaded(cats);
   }
@@ -848,6 +1074,9 @@ class _$_CatLoaded implements _CatLoaded {
     TResult? Function()? catLoading,
     TResult? Function(List<CatBreed> cats)? catLoaded,
     TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
   }) {
     return catLoaded?.call(cats);
   }
@@ -859,6 +1088,9 @@ class _$_CatLoaded implements _CatLoaded {
     TResult Function()? catLoading,
     TResult Function(List<CatBreed> cats)? catLoaded,
     TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
     required TResult orElse(),
   }) {
     if (catLoaded != null) {
@@ -874,6 +1106,9 @@ class _$_CatLoaded implements _CatLoaded {
     required TResult Function(_CatLoading value) catLoading,
     required TResult Function(_CatLoaded value) catLoaded,
     required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
   }) {
     return catLoaded(this);
   }
@@ -885,6 +1120,9 @@ class _$_CatLoaded implements _CatLoaded {
     TResult? Function(_CatLoading value)? catLoading,
     TResult? Function(_CatLoaded value)? catLoaded,
     TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
   }) {
     return catLoaded?.call(this);
   }
@@ -896,6 +1134,9 @@ class _$_CatLoaded implements _CatLoaded {
     TResult Function(_CatLoading value)? catLoading,
     TResult Function(_CatLoaded value)? catLoaded,
     TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
     required TResult orElse(),
   }) {
     if (catLoaded != null) {
@@ -982,6 +1223,9 @@ class _$_CatError implements _CatError {
     required TResult Function() catLoading,
     required TResult Function(List<CatBreed> cats) catLoaded,
     required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
   }) {
     return catError(message);
   }
@@ -993,6 +1237,9 @@ class _$_CatError implements _CatError {
     TResult? Function()? catLoading,
     TResult? Function(List<CatBreed> cats)? catLoaded,
     TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
   }) {
     return catError?.call(message);
   }
@@ -1004,6 +1251,9 @@ class _$_CatError implements _CatError {
     TResult Function()? catLoading,
     TResult Function(List<CatBreed> cats)? catLoaded,
     TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
     required TResult orElse(),
   }) {
     if (catError != null) {
@@ -1019,6 +1269,9 @@ class _$_CatError implements _CatError {
     required TResult Function(_CatLoading value) catLoading,
     required TResult Function(_CatLoaded value) catLoaded,
     required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
   }) {
     return catError(this);
   }
@@ -1030,6 +1283,9 @@ class _$_CatError implements _CatError {
     TResult? Function(_CatLoading value)? catLoading,
     TResult? Function(_CatLoaded value)? catLoaded,
     TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
   }) {
     return catError?.call(this);
   }
@@ -1041,6 +1297,9 @@ class _$_CatError implements _CatError {
     TResult Function(_CatLoading value)? catLoading,
     TResult Function(_CatLoaded value)? catLoaded,
     TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
     required TResult orElse(),
   }) {
     if (catError != null) {
@@ -1056,5 +1315,465 @@ abstract class _CatError implements CatState {
   String get message;
   @JsonKey(ignore: true)
   _$$_CatErrorCopyWith<_$_CatError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_CatDetailLoadedCopyWith<$Res> {
+  factory _$$_CatDetailLoadedCopyWith(
+          _$_CatDetailLoaded value, $Res Function(_$_CatDetailLoaded) then) =
+      __$$_CatDetailLoadedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CatBreed cat});
+}
+
+/// @nodoc
+class __$$_CatDetailLoadedCopyWithImpl<$Res>
+    extends _$CatStateCopyWithImpl<$Res, _$_CatDetailLoaded>
+    implements _$$_CatDetailLoadedCopyWith<$Res> {
+  __$$_CatDetailLoadedCopyWithImpl(
+      _$_CatDetailLoaded _value, $Res Function(_$_CatDetailLoaded) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cat = null,
+  }) {
+    return _then(_$_CatDetailLoaded(
+      cat: null == cat
+          ? _value.cat
+          : cat // ignore: cast_nullable_to_non_nullable
+              as CatBreed,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_CatDetailLoaded implements _CatDetailLoaded {
+  const _$_CatDetailLoaded({required this.cat});
+
+  @override
+  final CatBreed cat;
+
+  @override
+  String toString() {
+    return 'CatState.catDetailLoaded(cat: $cat)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CatDetailLoaded &&
+            (identical(other.cat, cat) || other.cat == cat));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, cat);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CatDetailLoadedCopyWith<_$_CatDetailLoaded> get copyWith =>
+      __$$_CatDetailLoadedCopyWithImpl<_$_CatDetailLoaded>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() catInitial,
+    required TResult Function() catLoading,
+    required TResult Function(List<CatBreed> cats) catLoaded,
+    required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
+  }) {
+    return catDetailLoaded(cat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? catInitial,
+    TResult? Function()? catLoading,
+    TResult? Function(List<CatBreed> cats)? catLoaded,
+    TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
+  }) {
+    return catDetailLoaded?.call(cat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? catInitial,
+    TResult Function()? catLoading,
+    TResult Function(List<CatBreed> cats)? catLoaded,
+    TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailLoaded != null) {
+      return catDetailLoaded(cat);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CatInitial value) catInitial,
+    required TResult Function(_CatLoading value) catLoading,
+    required TResult Function(_CatLoaded value) catLoaded,
+    required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
+  }) {
+    return catDetailLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CatInitial value)? catInitial,
+    TResult? Function(_CatLoading value)? catLoading,
+    TResult? Function(_CatLoaded value)? catLoaded,
+    TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
+  }) {
+    return catDetailLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CatInitial value)? catInitial,
+    TResult Function(_CatLoading value)? catLoading,
+    TResult Function(_CatLoaded value)? catLoaded,
+    TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailLoaded != null) {
+      return catDetailLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CatDetailLoaded implements CatState {
+  const factory _CatDetailLoaded({required final CatBreed cat}) =
+      _$_CatDetailLoaded;
+
+  CatBreed get cat;
+  @JsonKey(ignore: true)
+  _$$_CatDetailLoadedCopyWith<_$_CatDetailLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_CatDetailLoadingCopyWith<$Res> {
+  factory _$$_CatDetailLoadingCopyWith(
+          _$_CatDetailLoading value, $Res Function(_$_CatDetailLoading) then) =
+      __$$_CatDetailLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CatDetailLoadingCopyWithImpl<$Res>
+    extends _$CatStateCopyWithImpl<$Res, _$_CatDetailLoading>
+    implements _$$_CatDetailLoadingCopyWith<$Res> {
+  __$$_CatDetailLoadingCopyWithImpl(
+      _$_CatDetailLoading _value, $Res Function(_$_CatDetailLoading) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CatDetailLoading implements _CatDetailLoading {
+  const _$_CatDetailLoading();
+
+  @override
+  String toString() {
+    return 'CatState.catDetailLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CatDetailLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() catInitial,
+    required TResult Function() catLoading,
+    required TResult Function(List<CatBreed> cats) catLoaded,
+    required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
+  }) {
+    return catDetailLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? catInitial,
+    TResult? Function()? catLoading,
+    TResult? Function(List<CatBreed> cats)? catLoaded,
+    TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
+  }) {
+    return catDetailLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? catInitial,
+    TResult Function()? catLoading,
+    TResult Function(List<CatBreed> cats)? catLoaded,
+    TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailLoading != null) {
+      return catDetailLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CatInitial value) catInitial,
+    required TResult Function(_CatLoading value) catLoading,
+    required TResult Function(_CatLoaded value) catLoaded,
+    required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
+  }) {
+    return catDetailLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CatInitial value)? catInitial,
+    TResult? Function(_CatLoading value)? catLoading,
+    TResult? Function(_CatLoaded value)? catLoaded,
+    TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
+  }) {
+    return catDetailLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CatInitial value)? catInitial,
+    TResult Function(_CatLoading value)? catLoading,
+    TResult Function(_CatLoaded value)? catLoaded,
+    TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailLoading != null) {
+      return catDetailLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CatDetailLoading implements CatState {
+  const factory _CatDetailLoading() = _$_CatDetailLoading;
+}
+
+/// @nodoc
+abstract class _$$_CatDetailErrorCopyWith<$Res> {
+  factory _$$_CatDetailErrorCopyWith(
+          _$_CatDetailError value, $Res Function(_$_CatDetailError) then) =
+      __$$_CatDetailErrorCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$_CatDetailErrorCopyWithImpl<$Res>
+    extends _$CatStateCopyWithImpl<$Res, _$_CatDetailError>
+    implements _$$_CatDetailErrorCopyWith<$Res> {
+  __$$_CatDetailErrorCopyWithImpl(
+      _$_CatDetailError _value, $Res Function(_$_CatDetailError) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$_CatDetailError(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_CatDetailError implements _CatDetailError {
+  const _$_CatDetailError({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CatState.catDetailError(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CatDetailError &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CatDetailErrorCopyWith<_$_CatDetailError> get copyWith =>
+      __$$_CatDetailErrorCopyWithImpl<_$_CatDetailError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() catInitial,
+    required TResult Function() catLoading,
+    required TResult Function(List<CatBreed> cats) catLoaded,
+    required TResult Function(String message) catError,
+    required TResult Function(CatBreed cat) catDetailLoaded,
+    required TResult Function() catDetailLoading,
+    required TResult Function(String message) catDetailError,
+  }) {
+    return catDetailError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? catInitial,
+    TResult? Function()? catLoading,
+    TResult? Function(List<CatBreed> cats)? catLoaded,
+    TResult? Function(String message)? catError,
+    TResult? Function(CatBreed cat)? catDetailLoaded,
+    TResult? Function()? catDetailLoading,
+    TResult? Function(String message)? catDetailError,
+  }) {
+    return catDetailError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? catInitial,
+    TResult Function()? catLoading,
+    TResult Function(List<CatBreed> cats)? catLoaded,
+    TResult Function(String message)? catError,
+    TResult Function(CatBreed cat)? catDetailLoaded,
+    TResult Function()? catDetailLoading,
+    TResult Function(String message)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailError != null) {
+      return catDetailError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CatInitial value) catInitial,
+    required TResult Function(_CatLoading value) catLoading,
+    required TResult Function(_CatLoaded value) catLoaded,
+    required TResult Function(_CatError value) catError,
+    required TResult Function(_CatDetailLoaded value) catDetailLoaded,
+    required TResult Function(_CatDetailLoading value) catDetailLoading,
+    required TResult Function(_CatDetailError value) catDetailError,
+  }) {
+    return catDetailError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CatInitial value)? catInitial,
+    TResult? Function(_CatLoading value)? catLoading,
+    TResult? Function(_CatLoaded value)? catLoaded,
+    TResult? Function(_CatError value)? catError,
+    TResult? Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult? Function(_CatDetailLoading value)? catDetailLoading,
+    TResult? Function(_CatDetailError value)? catDetailError,
+  }) {
+    return catDetailError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CatInitial value)? catInitial,
+    TResult Function(_CatLoading value)? catLoading,
+    TResult Function(_CatLoaded value)? catLoaded,
+    TResult Function(_CatError value)? catError,
+    TResult Function(_CatDetailLoaded value)? catDetailLoaded,
+    TResult Function(_CatDetailLoading value)? catDetailLoading,
+    TResult Function(_CatDetailError value)? catDetailError,
+    required TResult orElse(),
+  }) {
+    if (catDetailError != null) {
+      return catDetailError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CatDetailError implements CatState {
+  const factory _CatDetailError({required final String message}) =
+      _$_CatDetailError;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$_CatDetailErrorCopyWith<_$_CatDetailError> get copyWith =>
       throw _privateConstructorUsedError;
 }

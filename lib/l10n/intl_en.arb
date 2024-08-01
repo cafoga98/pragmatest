@@ -14,5 +14,13 @@
   "type": "Type",
   "details": "Details",
   "searchByName": "Search your cat breed",
-  "nameApp": "Oh my cat!"
+  "nameApp": "Oh my cat!",
+  "noName": "No name",
+  "moreInfo": "More information",
+  "country": "Country",
+  "intelligence": "Intelligence",
+  "adaptability": "Adaptability",
+  "affectionLevel": "Affection Level",
+  "description": "Description",
+  "lifeSpan": "Life span in years"
 }

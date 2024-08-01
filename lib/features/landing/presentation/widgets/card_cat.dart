@@ -1,8 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pragmatest/core/shared/auto_route/router.dart';
 import 'package:pragmatest/core/shared/utils/colors_repository.dart';
 import 'package:pragmatest/core/shared/utils/images_reporitory.dart';
 import 'package:pragmatest/core/shared/utils/style_repository.dart';
+import 'package:pragmatest/features/landing/domain/blocs/cat_bloc/cat_bloc.dart';
 import 'package:pragmatest/features/landing/domain/entities/cat_breed.dart';
+import 'package:pragmatest/generated/l10n.dart';
 
 class CardCat extends StatelessWidget {
   final CatBreed catBreed;
@@ -30,7 +35,8 @@ class CardCat extends StatelessWidget {
                 image: NetworkImage(
                   catBreed.urlImage ?? '',
                 ),
-                imageErrorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                imageErrorBuilder: (BuildContext context, Object exception,
+                    StackTrace? stackTrace) {
                   return Image.asset(
                     height: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.width,
@@ -57,7 +63,7 @@ class CardCat extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Text(
-                          catBreed.name ?? 'No name',
+                          catBreed.name ?? S.current.noName,
                           style: medium.copyWith(
                             color: ColorsRepository.teal,
                             fontWeight: FontWeight.bold,
@@ -69,16 +75,16 @@ class CardCat extends StatelessWidget {
                           Flexible(
                             flex: 1,
                             child: customListTile(
-                              title: 'Country',
-                              subtitle: catBreed.countryCodes ?? '',
+                              title: S.current.country,
+                              subtitle: catBreed.origin ?? '',
                             ),
                           ),
                           Flexible(
                             flex: 1,
                             child: customListTile(
-                              title: 'Intelligence',
+                              title: S.current.intelligence,
                               subtitle:
-                              '${catBreed.intelligence.toString() ?? ''}/5',
+                                  '${catBreed.intelligence.toString() ?? ''}/5',
                             ),
                           )
                         ],
@@ -93,7 +99,16 @@ class CardCat extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: IconButton(
                     splashColor: Colors.white54,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<CatBloc>().add(
+                            CatEvent.fetchCatDetail(name: catBreed.id),
+                          );
+                      context.router.push(
+                        CatDetailsRoute(
+                          catName: catBreed.name ?? S.current.noName,
+                        ),
+                      );
+                    },
                     icon: const Icon(
                       Icons.more,
                     ),
@@ -118,9 +133,6 @@ class CardCat extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        subtitle: Text(
-          subtitle ?? 'No name',
-          style: small
-        ),
+        subtitle: Text(subtitle ?? S.current.noName, style: small),
       );
 }
